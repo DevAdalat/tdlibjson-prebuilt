@@ -2,7 +2,7 @@
 
 ANDROID_NDK_VERSION=${2:-25.1.8937393}
 OPENSSL_INSTALL_DIR=${3:-third-party/openssl}
-OPENSSL_VERSION=${4:-OpenSSL_1_1_1s} # openssl-3.0.6
+OPENSSL_VERSION=${4:-OpenSSL_1_1_1u} # openssl-3.0.6
 
 if [ ! -d "$ANDROID_SDK_ROOT" ] ; then
   echo "Error: directory \"$ANDROID_SDK_ROOT\" doesn't exist. Run ./fetch-sdk.sh first, or provide a valid path to Android SDK."
@@ -44,9 +44,9 @@ if ! clang --help >/dev/null 2>&1 ; then
 fi
 
 ANDROID_API32=16
-ANDROID_API64=33
+ANDROID_API64=21
 if [[ ${ANDROID_NDK_VERSION%%.*} -ge 24 ]] ; then
-  ANDROID_API32=21
+  ANDROID_API32=19
 fi
 
 for ABI in arm64-v8a armeabi-v7a x86_64 x86 ; do
