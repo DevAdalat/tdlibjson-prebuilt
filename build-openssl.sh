@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ANDROID_NDK_VERSION=${2:-25.1.8937393}
+ANDROID_NDK_VERSION=${2:-25.2.9519653}
 OPENSSL_INSTALL_DIR=${3:-third-party/openssl}
 OPENSSL_VERSION=${4:-OpenSSL_1_1_1u} # openssl-3.0.6
 
